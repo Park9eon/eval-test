@@ -1,0 +1,14 @@
+{
+  "name": "json-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "handlebars": "^4.0.12",
+    "mustache": "^3.0.1"
+  },
+  "scripts": {
+    "start": "node test.js"
+  }
+}
