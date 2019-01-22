@@ -5,11 +5,14 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "ejs": "^2.6.1",
     "handlebars": "^4.0.12",
+    "json5": "^2.1.0",
     "mustache": "^3.0.1",
     "vm2": "^3.6.6"
   },
   "scripts": {
-    "start": "node test.js"
+    "test:vm2": "node ./src/vm2.test.js",
+    "test:ejs": "node ./src/ejs.test.js"
   }
 }
