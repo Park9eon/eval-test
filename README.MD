@@ -6,21 +6,28 @@ const obj = {
     date: new Date(),
     object: {
         child: "child"
-    }
+    },
+    list: [1, 2, 3],
 };
 
 const template = `
-  {
-    "string": "{{string}}",
-    "int": {{int}},
-    "float": "{{float}}",
-    "stringWithNumber": "{{string}}-{{int}}",
-    "date": "{{date | 'yyyy-MM-dd'}}",
-    "child": "{{object.child}}"
-    "rp": {{int === float}}
-    "math": {{Math.round(float)}},
-    "if": {{!date}}
-  }
+{
+    "string": string,
+    "int": int,
+    "float": float,
+    "date": date,
+    "dateString": date.toString(),
+    "object": object,
+    "child": object && object.child,
+    "boolean": int === float,
+    "list": list,
+    "customList": [int, float],
+    "self": {
+        "int": int,
+    },
+    "math": Math.floor(float),
+    ["nameWString" + int]: "nameWString" + int,
+    "listWithMap": list.map(n => n + 1),
+};
 `;
-
 ```
